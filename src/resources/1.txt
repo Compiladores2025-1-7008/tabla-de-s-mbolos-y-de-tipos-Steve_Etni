@@ -1,0 +1,16 @@
+struct Course {
+    int id;
+    float[5] grades;
+}
+
+struct Department {
+    Course[3] courses;
+    int count;
+}
+
+int main() {
+    Department dept;
+    Course c1;
+    float average;
+    return 0;
+}

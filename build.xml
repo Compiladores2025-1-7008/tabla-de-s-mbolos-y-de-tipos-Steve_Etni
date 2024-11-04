@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Tabla de Símbolos y de Tipos" default="run" basedir=".">
+    
+    <!-- Definición de propiedades -->
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="build"/>
+    <property name="resources.dir" value="${src.dir}/resources"/>
+    <property name="main.class" value="src.main.Main"/>
+
+    <!-- Limpiar el directorio de compilación -->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <!-- Inicializar directorios -->
+    <target name="init">
+        <mkdir dir="${build.dir}"/>
+    </target>
+
+    <!-- Compilar el proyecto -->
+    <target name="compile" depends="clean, init">
+        <javac srcdir="${src.dir}" 
+               destdir="${build.dir}" 
+               includeantruntime="false">
+            <include name="**/*.java"/>
+        </javac>
+    </target>
+
+    <!-- Ejecutar el programa -->
+    <target name="run" depends="compile">
+        <java classname="${main.class}" fork="false">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+            </classpath>
+        </java>
+    </target>
+
+</project>
