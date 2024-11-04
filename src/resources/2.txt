@@ -1,0 +1,22 @@
+struct Address {
+    int street_num;
+    int zip_code;
+}
+
+struct Student {
+    int id;
+    float[3] grades;
+    Address addr;
+}
+
+struct School {
+    Student[50] students;
+    Address location;
+    int total;
+}
+
+int main() {
+    School mySchool;
+    Student newStudent;
+    return 0;
+}
