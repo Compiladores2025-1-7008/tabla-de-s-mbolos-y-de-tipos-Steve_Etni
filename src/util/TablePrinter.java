@@ -316,7 +316,7 @@ public class TablePrinter {
         String[] headers = { "Nombre", "Tipo ID", "Tipo Retorno", "Categoría", "Ámbito" };
         rows.add(headers);
 
-        TreeMap<String, Symbol> symbols = new TreeMap<>(table.getSymbols());
+        Map<String, Symbol> symbols = table.getSymbols();
         for (Map.Entry<String, Symbol> entry : symbols.entrySet()) {
             String[] row = new String[5];
             Symbol sym = entry.getValue();
@@ -372,7 +372,7 @@ public class TablePrinter {
         String[] headers = { "Nombre", "Tipo ID", "Categoría" };
         rows.add(headers);
 
-        TreeMap<String, Symbol> symbols = new TreeMap<>(table.getSymbols());
+        Map<String, Symbol> symbols = table.getSymbols();
         for (Map.Entry<String, Symbol> entry : symbols.entrySet()) {
             if (!entry.getValue().getCat().equals("function")) {
                 String[] row = new String[3];

@@ -13,7 +13,7 @@ public class SymbolTableImpl implements SymbolTable {
     
     private Map<String, List<Symbol>> symbolsByName;
 
-    private Map<String, Symbol> symbols;
+    private Map<String, Symbol> symbols = new LinkedHashMap<>();
 
     private SymbolTable parent;
 
