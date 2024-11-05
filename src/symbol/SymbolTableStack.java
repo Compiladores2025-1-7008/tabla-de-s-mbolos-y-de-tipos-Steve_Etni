@@ -1,3 +1,4 @@
+package src.symbol;
 import java.util.Optional;
 
 public interface SymbolTableStack{
@@ -5,6 +6,6 @@ public interface SymbolTableStack{
     SymbolTable pop();
     Optional<SymbolTable> peek();
     Optional<SymbolTable> base();
-    Optional<SymbolTable> lookup(String id); //Busca un sìmbolo en la cima o en la base
+    Optional<SymbolTable> lookup(String id);
 
 }

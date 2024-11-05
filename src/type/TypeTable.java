@@ -1,9 +1,9 @@
+package src.type;
 import java.util.Optional;
 
-
+import src.symbol.SymbolTable;
 
 public interface TypeTable {
-    //Map<String, Symbol> syms;
     int getTam(int id);        
     int getItems(int id);
     String getName(int id);
@@ -13,4 +13,5 @@ public interface TypeTable {
     
     int addType(String name, int items, int parent);
     int addType(String name, SymbolTable parent);   
+    int findTypeByName(String name);
 }

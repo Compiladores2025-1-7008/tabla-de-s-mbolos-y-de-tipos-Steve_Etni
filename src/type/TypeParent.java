@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+package src.type;
+import src.symbol.SymbolTable;
 
 public interface TypeParent {
 

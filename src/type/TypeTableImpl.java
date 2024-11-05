@@ -12,6 +12,7 @@ import src.symbol.SymbolTableImpl;
  * en el programa, incluyendo tipos primitivos, arrays y estructuras.
  *
  * @author etnicst
+ * @author steve-quezada
  */
 public class TypeTableImpl implements TypeTable {
     
