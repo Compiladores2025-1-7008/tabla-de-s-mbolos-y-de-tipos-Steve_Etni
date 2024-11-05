@@ -1,0 +1,25 @@
+struct Vector {
+    float x;
+    float y;
+    float z;
+};
+
+struct Matrix {
+    Vector rows[3];
+    int size;
+};
+
+struct Transform {
+    Matrix rotation;
+    Vector position;
+    float scale[3];
+};
+
+int main() {
+    Vector v1;
+    Matrix m1;
+    Transform t1;
+    float temp;
+    int i;
+    return 0;
+}
