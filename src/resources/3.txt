@@ -1,0 +1,24 @@
+struct RGB {
+    float r;
+    float g;
+    float b;
+};
+
+struct Pixel {
+    RGB color;
+    int x;
+    int y;
+};
+
+struct Image {
+    Pixel[1024] pixels;
+    int width;
+    int height;
+};
+
+int main() {
+    Image photo;
+    Pixel px;
+    RGB bgColor;
+    return 0;
+}

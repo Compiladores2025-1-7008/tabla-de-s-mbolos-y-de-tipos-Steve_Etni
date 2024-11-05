@@ -1,0 +1,43 @@
+struct Date {
+    int day;
+    int month;
+    int year;
+}
+
+struct Time {
+    int hour;
+    int minute;
+    int second;
+}
+
+struct Timestamp {
+    Date date;
+    Time time;
+}
+
+struct Column {
+    int type;
+    int[100] intData;
+    float[100] floatData;
+    int dataCount;
+}
+
+struct Table {
+    Column[10] columns;
+    int columnCount;
+    Timestamp lastModified;
+}
+
+struct Database {
+    Table[20] tables;
+    int tableCount;
+    float[5] statistics;
+}
+
+int main() {
+    Database myDB;
+    Table users;
+    Column userData;
+    Timestamp now;
+    return 0;
+}
